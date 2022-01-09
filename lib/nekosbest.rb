@@ -46,12 +46,12 @@ module Nekosbest
 
   class Result
 
-    def initialize(url, artist_href, artist_name, source_url)
-      @url, @artist_href, @artist_name, @source_url = url, artist_href, artist_name, source_url
+    def initialize(url, artist_href, artist_name, source_url, anime_name)
+      @url, @artist_href, @artist_name, @source_url, @anime_name = url, artist_href, artist_name, source_url, anime_name
     end
 
     def to_s
-      "<url='#@url', artist_href='#@artist_href', artist_name='#@artist_name', source_url='#@source_url'>"
+      "<url='#@url', artist_href='#@artist_href', artist_name='#@artist_name', source_url='#@source_url', anime_name='#@anime_name'>"
     end
 
     def url
@@ -68,6 +68,10 @@ module Nekosbest
 
     def source_url
       @source_url
+    end
+
+    def anime_name
+      @anime_name
     end
   end
 
@@ -96,7 +100,7 @@ module Nekosbest
         ret = g.posts
         ar = Array.new
         for i in ret["url"]
-          ar.append(Result.new(i["url"], i["artist_href"], i["artist_name"], i["source_url"]))
+          ar.append(Result.new(i["url"], i["artist_href"], i["artist_name"], i["source_url"], i["anime_name"]))
         end
         return ar
           
