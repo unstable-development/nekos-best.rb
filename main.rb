@@ -106,5 +106,3 @@ def get_img (type, amount = 1)
         return type + " is not an option! It has to be one ofte following:\n #$CATEGORYS"
     end
 end
-
-print get_img("nekos")
