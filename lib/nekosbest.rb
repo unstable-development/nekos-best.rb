@@ -1,16 +1,14 @@
 # frozen_string_literal: true
 
 require_relative "nekosbest/version"
+require "rubygems"
+require "httparty"
 
 module Nekosbest
 
-  require "rubygems"
-  require "httparty"
-
-  __copyright__ = "Copyright 2021 NekoFanatic"
+  __copyright__ = "Copyright 2022 NekoFanatic"
 
   API_URL = "https://nekos.best/"
-
 
   $CATEGORYS = Array.[](
       "baka",
@@ -45,6 +43,7 @@ module Nekosbest
   )
 
   class Result
+    attr_reader :url, :artist_href, :artist_name, :source_url, :anime_name
 
     def initialize(url, artist_href, artist_name, source_url, anime_name)
       @url, @artist_href, @artist_name, @source_url, @anime_name = url, artist_href, artist_name, source_url, anime_name
@@ -52,26 +51,6 @@ module Nekosbest
 
     def to_s
       "<url='#@url', artist_href='#@artist_href', artist_name='#@artist_name', source_url='#@source_url', anime_name='#@anime_name'>"
-    end
-
-    def url
-      @url
-    end
-
-    def artist_href
-      @artist_href
-    end
-
-    def artist_name
-      @artist_name
-    end
-
-    def source_url
-      @source_url
-    end
-
-    def anime_name
-      @anime_name
     end
   end
 
