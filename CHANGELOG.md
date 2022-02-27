@@ -27,3 +27,11 @@
 
 - Made code more consistent
 - Updated code to raise errors if there are wrong inputs
+
+## [2.0.3] - 2022-02-27
+
+- invalid gem (removed)
+
+## [2.0.4] - 2022-02-27
+
+- Improved check for invalid inputs
