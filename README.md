@@ -4,7 +4,7 @@ This gem is for the [nekos.best API](https://nekos.best/) to provide you with fu
 
 ## Installation
 
-Download the [`nekosbest-2.0.1.gem`](https://github.com/NekoFanatic/nekos-best.rb/blob/master/nekosbest-2.0.1.gem) file (klick on `view raw`) and install the gem with:
+Download the [`nekosbest-2.0.1.gem`](https://github.com/NekoFanatic/nekos-best.rb/blob/master/nekosbest-2.0.1.gem) file and install the gem with:
 
     $ gem install nekosbest
 
