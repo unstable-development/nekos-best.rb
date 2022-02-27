@@ -22,3 +22,8 @@
 
 - Updated to nekos.best API v2
 - Now returns just a list or a dictionary, not result-objects in a list
+
+## [2.0.2] - 2022-02-27
+
+- Made code more consistent
+- Updated code to raise errors if there are wrong inputs

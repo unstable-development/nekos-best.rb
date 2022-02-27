@@ -7,7 +7,7 @@ require "httparty"
 module Nekosbest
 
   __copyright__ = "Copyright 2022 NekoFanatic"
-  __version__ = "2.0.1"
+  __version__ = "2.0.2"
 
   API_URL = "https://nekos.best/"
   $API_VERSION = "v2"
@@ -61,11 +61,13 @@ module Nekosbest
 
   def get_img (type, amount = 1)
     amount = amount.to_i
+
     if amount == 0
-      return "Not a valid amount! It has to be a number between 1 and 20"
+      raise "Not a valid amount! It has to be a number between 1 and 20"
     end
+
     if $CATEGORYS.include? type
-      if amount <= 20
+      if amount <= 20 and amount >= 1
           g = Request.new(type, amount)
           res = g.posts["results"]
 
@@ -76,11 +78,11 @@ module Nekosbest
           end
           
       else
-        return "The amount has to be a number between 1 and 20 !"
+        raise "The amount has to be a number between 1 and 20 !"
       end
       
     else
-      return type + " is not an option! It has to be one of the following:\n #$CATEGORYS"
+      raise "'%s' is not an option! It has to be one of the following:\n #$CATEGORYS" % type
     end
   end
 end
