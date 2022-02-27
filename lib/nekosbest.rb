@@ -7,8 +7,10 @@ require "httparty"
 module Nekosbest
 
   __copyright__ = "Copyright 2022 NekoFanatic"
+  __version__ = "2.0.1"
 
   API_URL = "https://nekos.best/"
+  $API_VERSION = "v2"
 
   $CATEGORYS = Array.[](
       "baka",
@@ -24,8 +26,9 @@ module Nekosbest
       "highfive",
       "hug",
       "kiss",
+      "kitsune",
       "laugh",
-      "nekos",
+      "neko",
       "pat",
       "poke",
       "pout",
@@ -42,20 +45,8 @@ module Nekosbest
       "wink",
   )
 
-  class Result
-    attr_reader :url, :artist_href, :artist_name, :source_url, :anime_name
-
-    def initialize(url, artist_href, artist_name, source_url, anime_name)
-      @url, @artist_href, @artist_name, @source_url, @anime_name = url, artist_href, artist_name, source_url, anime_name
-    end
-
-    def to_s
-      "<url='#@url', artist_href='#@artist_href', artist_name='#@artist_name', source_url='#@source_url', anime_name='#@anime_name'>"
-    end
-  end
 
   class Request
-
     include HTTParty
     base_uri API_URL
 
@@ -64,7 +55,7 @@ module Nekosbest
     end
 
     def posts
-      self.class.get("/api/v1/#@type?amount=#@amount")
+      self.class.get("/api/#$API_VERSION/#@type?amount=#@amount")
     end
   end
 
@@ -75,20 +66,21 @@ module Nekosbest
     end
     if $CATEGORYS.include? type
       if amount <= 20
-        g = Request.new(type, amount)
-        ret = g.posts
-        ar = Array.new
-        for i in ret["url"]
-          ar.append(Result.new(i["url"], i["artist_href"], i["artist_name"], i["source_url"], i["anime_name"]))
-        end
-        return ar
+          g = Request.new(type, amount)
+          res = g.posts["results"]
+
+          if res.length() > 1
+              return res
+          else
+              return res[0]
+          end
           
       else
         return "The amount has to be a number between 1 and 20 !"
       end
       
     else
-      return type + " is not an option! It has to be one ofte following:\n #$CATEGORYS"
+      return type + " is not an option! It has to be one of the following:\n #$CATEGORYS"
     end
   end
 end

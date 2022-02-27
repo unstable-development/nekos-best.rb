@@ -4,7 +4,7 @@ This gem is for the [nekos.best API](https://nekos.best/) to provide you with fu
 
 ## Installation
 
-Download the [`nekosbest-0.1.3.gem`](https://github.com/NekoFanatic/nekos-best.rb/blob/master/nekosbest-0.1.3.gem) file (klick on `view raw`) and install the gem with:
+Download the [`nekosbest-2.0.1.gem`](https://github.com/NekoFanatic/nekos-best.rb/blob/master/nekosbest-2.0.1.gem) file (klick on `view raw`) and install the gem with:
 
     $ gem install nekosbest
 
@@ -15,18 +15,17 @@ require "nekosbest"
 
 include Nekosbest
 
-# one image / gif (list with one element)
-print Nekosbest.get_img("nekos")
+# one image / gif 
+print Nekosbest.get_img("neko")
 
 # more images / gifs (list with max 20 objects)
-print Nekosbest.get_img("nekos", 3)
-
+print Nekosbest.get_img("neko", 3)
 ```
 
 ### Listed topics
 
 ```ruby
-["baka", "bite", "blush", "bored", "cry", "cuddle", "dance", "facepalm", "feed", "happy", "highfive", "hug", "kiss", "laugh", "nekos", "pat", "poke", "pout", "shrug", "slap", "sleep", "smile", "smug", "stare", "think", "thumbsup", "tickle", "wave", "wink"]
+["baka", "bite", "blush", "bored", "cry", "cuddle", "dance", "facepalm", "feed", "happy", "highfive", "hug", "kiss", "kitsune", "laugh", "nekos", "pat", "poke", "pout", "shrug", "slap", "sleep", "smile", "smug", "stare", "think", "thumbsup", "tickle", "wave", "wink"]
 ```
 
 ## License

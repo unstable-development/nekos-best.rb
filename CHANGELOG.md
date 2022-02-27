@@ -17,3 +17,8 @@
 ## [0.1.3] - 2022-01-12
 
 - Made the code more readeble
+
+## [2.0.1] - 2022-02-27
+
+- Updated to nekos.best API v2
+- Now returns just a list or a dictionary, not result-objects in a list
