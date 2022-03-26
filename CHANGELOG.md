@@ -35,3 +35,8 @@
 ## [2.0.4] - 2022-02-27
 
 - Improved check for invalid inputs
+
+## [2.0.5] - 2022-03-26
+
+- Added new endpoint `waifu`
+- removed useless check for ammount of requested objects
