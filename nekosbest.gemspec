@@ -9,13 +9,13 @@ Gem::Specification.new do |spec|
   spec.email = ["83883849+NekoFanatic@users.noreply.github.com"]
 
   spec.summary = "A simple ruby wrapper for the nekos.best API https://nekos.best/."
-  spec.homepage = "https://github.com/NekoFanatic/nekos-best.rb"
+  spec.homepage = "https://github.com/unstable-development/nekos-best.rb"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/NekoFanatic/nekos-best.rb"
-  spec.metadata["changelog_uri"] = "https://github.com/NekoFanatic/nekos-best.rb/blob/master/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/unstable-development/nekos-best.rb"
+  spec.metadata["changelog_uri"] = "https://github.com/unstable-development/nekos-best.rb/blob/master/CHANGELOG.md"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject do |f|
