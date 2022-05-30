@@ -40,3 +40,7 @@
 
 - Added new endpoint `waifu`
 - removed useless check for ammount of requested objects
+
+## [2.0.6] - 2022-05-30
+
+- Added new endpoints `handhold`, `kick`, `punch`, `shoot`

@@ -6,8 +6,8 @@ require "httparty"
 
 module Nekosbest
 
-  __copyright__ = "Copyright 2022 NekoFanatic"
-  __version__ = "2.0.5"
+  __copyright__ = "Copyright 2022 unstable-development"
+  __version__ = "2.0.6"
 
   API_URL = "https://nekos.best/"
   $API_VERSION = "v2"
@@ -23,8 +23,10 @@ module Nekosbest
       "facepalm",
       "feed",
       "happy",
+      "handhold",
       "highfive",
       "hug",
+      "kick",
       "kiss",
       "kitsune",
       "laugh",
@@ -32,6 +34,8 @@ module Nekosbest
       "pat",
       "poke",
       "pout",
+      "punch",
+      "shoot",
       "shrug",
       "slap",
       "sleep",

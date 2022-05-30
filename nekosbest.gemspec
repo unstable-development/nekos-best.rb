@@ -5,7 +5,7 @@ require_relative "lib/nekosbest/version"
 Gem::Specification.new do |spec|
   spec.name = "nekosbest"
   spec.version = Nekosbest::VERSION
-  spec.authors = ["NekoFanatic"]
+  spec.authors = ["unstable-development"]
   spec.email = ["83883849+NekoFanatic@users.noreply.github.com"]
 
   spec.summary = "A simple ruby wrapper for the nekos.best API https://nekos.best/."

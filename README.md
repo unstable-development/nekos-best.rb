@@ -4,7 +4,7 @@ This gem is for the [nekos.best API](https://nekos.best/) to provide you with fu
 
 ## Installation
 
-Download the [`nekosbest-2.0.5.gem`](https://github.com/unstable-development/nekos-best.rb/blob/master/nekosbest-2.0.5.gem) file and install the gem with:
+Download the [`nekosbest-2.0.6.gem`](https://github.com/unstable-development/nekos-best.rb/blob/master/nekosbest-2.0.6.gem) file and install the gem with:
 
     $ gem install nekosbest
 
@@ -25,7 +25,7 @@ print Nekosbest.get_img("neko", 3)
 ### Listed topics
 
 ```ruby
-["baka", "bite", "blush", "bored", "cry", "cuddle", "dance", "facepalm", "feed", "happy", "highfive", "hug", "kiss", "kitsune", "laugh", "nekos", "pat", "poke", "pout", "shrug", "slap", "sleep", "smile", "smug", "stare", "think", "thumbsup", "tickle", "wave", "waifu", "wink"]
+["baka", "bite", "blush", "bored", "cry", "cuddle", "dance", "facepalm", "feed", "happy", "handhold", "highfive", "hug", "kick", "kiss", "kitsune", "laugh", "nekos", "pat", "poke", "pout", "punch", "shoot""shrug", "slap", "sleep", "smile", "smug", "stare", "think", "thumbsup", "tickle", "wave", "waifu", "wink"]
 ```
 
 ## License
